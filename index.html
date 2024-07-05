@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/countries.css">
+  <script src="/assets/js/countries.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Countries</h1>
+    <button id="addNewCountry">Add New</button>
+  </header>
+
+  <div class="container">
+
+    <div class="countriesOutput" id="countriesContainer"></div>
+
+    <dialog id="modal">
+      <h2 class="modelAddNew">Add New Country</h2>
+      <h2 class="modelEdit">Edit Country</h2>
+      <form method="dialog" autocomplete="off" id="addCountry">
+        <p><input required type="text" name="countryName" placeholder="Please type the country name"></p>
+        <p><input required type="number" name="population" placeholder="Please enter the population"></p>
+        <p><input required type="text" name="flag" placeholder="Please enter the flag emoji of the country"></p>
+        <p><input required type="text" name="famousFood" placeholder="Please enther the famous food of the country"></p>
+        <p><input required type="text" name="capitalCity" placeholder="Please enter the capital city of the country"></p>
+        <p class="buttons"><button class="modelAddNew">Add</button> <button class="modelEdit">Save</button> <button type="button" onclick="addCountry.reset();modal.close();">Cancel</button></p>
+        <input type="hidden" name="id" value="">
+      </form>
+    </dialog>
+  </div>
+  
+</body>
+</html>
